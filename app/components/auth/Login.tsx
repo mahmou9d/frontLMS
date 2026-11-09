@@ -125,21 +125,20 @@ const Login: FC<Props> = ({ setRoute, setOpen }) => {
 
       <form onSubmit={handleSubmit} noValidate className="space-y-4">
         {/* Admin helper (development only) */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="flex items-center justify-between gap-3 rounded-2xl bg-[#0B1020]/5 p-3 dark:bg-white/10">
-            <div className="min-w-0 text-sm font-semibold text-[#0B1020]/70 dark:text-white/70">
-              <p className="truncate">Admin: {ADMIN.email}</p>
-              <p className="truncate">Password: {ADMIN.password}</p>
-            </div>
-            <button
-              type="button"
-              onClick={() => formik.setValues(ADMIN)}
-              className={`h-10 shrink-0 rounded-full border border-[#0B1020]/10 bg-white px-4 text-sm font-semibold text-[#0B1020] transition-colors duration-150 hover:bg-[#0B1020]/5 motion-reduce:transition-none dark:border-white/10 dark:bg-[#0B1020] dark:text-white dark:hover:bg-white/10 ${FOCUS}`}
-            >
-              Fill admin account
-            </button>
+
+        <div className="flex items-center justify-between gap-3 rounded-2xl bg-[#0B1020]/5 p-3 dark:bg-white/10">
+          <div className="min-w-0 text-sm font-semibold text-[#0B1020]/70 dark:text-white/70">
+            <p className="truncate">Admin: {ADMIN.email}</p>
+            <p className="truncate">Password: {ADMIN.password}</p>
           </div>
-        )}
+          <button
+            type="button"
+            onClick={() => formik.setValues(ADMIN)}
+            className={`h-10 shrink-0 rounded-full border border-[#0B1020]/10 bg-white px-4 text-sm font-semibold text-[#0B1020] transition-colors duration-150 hover:bg-[#0B1020]/5 motion-reduce:transition-none dark:border-white/10 dark:bg-[#0B1020] dark:text-white dark:hover:bg-white/10 ${FOCUS}`}
+          >
+            Fill admin account
+          </button>
+        </div>
 
         <div>
           <label htmlFor="email" className={LABEL}>
