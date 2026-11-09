@@ -99,7 +99,6 @@ const Login: FC<Props> = ({ setRoute, setOpen }) => {
 
   return (
     <div className="w-full px-1 py-4 sm:px-2">
-      {/* Route switch */}
       <div className="mb-6 grid grid-cols-2 gap-1 rounded-full bg-[#0B1020]/5 p-1 dark:bg-white/10">
         <button
           type="button"
