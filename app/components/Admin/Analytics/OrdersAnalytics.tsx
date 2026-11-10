@@ -296,8 +296,8 @@ const OrdersAnalytics = ({ isDashboard }: Props) => {
                 </tr>
               </thead>
               <tbody>
-                {shown.map((p) => (
-                  <tr key={p.name}>
+                {shown.map((p, i) => (
+                  <tr key={i}>
                     <th scope="row">{p.name}</th>
                     <td>{p.count}</td>
                   </tr>

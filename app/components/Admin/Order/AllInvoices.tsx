@@ -44,7 +44,7 @@ const AllInvoices = ({ isDashboard }: Props) => {
   const { data, isLoading } = useGetAllOrdersQuery({});
   const { data: usersData } = useGetAllUsersQuery({});
   const { data: coursesData } = useGetAllCoursesQuery({});
-
+  console.log(data);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -63,7 +63,7 @@ const AllInvoices = ({ isDashboard }: Props) => {
         userEmail: user?.email ?? "",
         title: course?.name ?? "",
         price: "$" + (course?.price ?? 0),
-        created_at: format(item.createdAt),
+        created_at: item.createdAt ? format(item.createdAt) : "",
       };
     });
   }, [data, usersData, coursesData]);
