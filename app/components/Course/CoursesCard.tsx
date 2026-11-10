@@ -40,6 +40,7 @@ const CoursesCard = ({ course, isProfile }: Props) => {
       href={
         isProfile ? `/course-access/${course._id}` : `/course/${course._id}`
       }
+      prefetch={false}
       className={`group flex h-full flex-col rounded-3xl border border-[#0B1020]/10 bg-white p-2 no-underline transition-colors duration-150 hover:border-[#2F4BFF] motion-reduce:transition-none dark:border-white/10 dark:bg-[#0B1020] dark:hover:border-[#2F4BFF] ${FOCUS}`}
     >
       {/* Thumbnail */}
